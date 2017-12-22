@@ -19,3 +19,13 @@ alsamixer
 
 -- playback
   385  aplay daiko.1.wav 
+
+
+-- git
+
+echo "# myYoutube" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/chialin668/myYoutube.git
+git push -u origin master
