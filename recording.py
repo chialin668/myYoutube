@@ -19,7 +19,7 @@ class Recording:
         self.led = Light(17)
  
     def record(self):
-        self.led.blink()
+        self.led.set_on()
         stream = self.paudio.open(format=self.FORMAT,
                                 channels=self.CHANNELS,
                                 rate=self.RATE,
@@ -36,6 +36,7 @@ class Recording:
         stream.stop_stream()
         stream.close()
         self.paudio.terminate()
+        self.led.set_off()
         return frames
  
     def write_to_file(self):
